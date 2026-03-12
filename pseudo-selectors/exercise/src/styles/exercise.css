@@ -1,7 +1,14 @@
 /**
 * Gebruik :is selector om te stijlen zoals in de tekst beschreven staat.
-*
-* Wat gebeurt er bij een typo bij een klassieke multi-selector?
+*/
+.is-container :is(h3, span, strong)  {
+    color: red;
+}
+
+:is(.is-container) a:hover, a:focus {
+    color: blue;
+}
+/* Wat gebeurt er bij een typo bij een klassieke multi-selector?
 * Vergelijk met :is()
 *
 * Wat met de specificiteit? Klassieke selector vs :is()? Plaats ze eens boven of onder elkaar.
@@ -10,11 +17,19 @@
 /**
 * Gebruik :where selector om te stijlen zoals in de tekst beschreven staat.Wat gebeurt er met de specificiteit?
 */
+.where-container :where(h3, span, strong) {
+    color:blue;
+}
 
+:where(.where-container) a:hover, a:focus {
+    color: rgb(0, 104, 17);
+}
 /**
 * Gebruik :not selector om te stijlen zoals in de tekst beschreven staat.
 */
-
+.not-container :not(.no-italic) {
+    font-style: italic
+}
 /**
 * Gebruik :has selector om te stijlen zoals in de tekst beschreven staat.
 */
@@ -22,3 +37,6 @@
 /**
 * Style de navigatie links met de :has pseudo-selector.
 */
+nav:has(a:hover) a:not(:hover){
+    opacity: 0.5;
+}

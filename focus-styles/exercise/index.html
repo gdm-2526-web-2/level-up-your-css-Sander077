@@ -18,25 +18,37 @@
         <form class="form">
           <fieldset>
             <label>
-              First name
-              <input name="first_name" placeholder="First name" autocomplete="given-name" />
+              <span>First name</span>
+              <input
+                name="first_name"
+                placeholder="First name"
+                autocomplete="given-name"
+              />
             </label>
             <label>
-              Email
-              <input type="email" name="email" placeholder="Email" autocomplete="email" />
+              <span>Email</span>
+              <input
+                type="email"
+                name="email"
+                placeholder="Email"
+                autocomplete="email"
+              />
             </label>
           </fieldset>
         </form>
       </section>
 
-      <hr>
+      <hr />
 
       <section class="container">
         <h2>Focus-visible</h2>
 
         <button>Default styles zijn ok!</button><br />
-        <button class="focus-only">:focus stijlt te vaak, ook bij klik!</button><br />
-        <button class="focus-visible-only">:focus-visible stijlt alleen bij toetsenbord!</button>
+        <button class="focus-only">:focus stijlt te vaak, ook bij klik!</button
+        ><br />
+        <button class="focus-visible-only">
+          :focus-visible stijlt alleen bij toetsenbord!
+        </button>
       </section>
     </main>
     <script type="module" src="/src/scripts/main.js"></script>
