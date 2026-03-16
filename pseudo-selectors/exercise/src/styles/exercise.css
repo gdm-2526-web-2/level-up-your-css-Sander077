@@ -33,7 +33,10 @@
 /**
 * Gebruik :has selector om te stijlen zoals in de tekst beschreven staat.
 */
-
+p::selection {
+    background-color: rgb(255, 238, 0);
+    color: rgb(255, 0, 0);
+}
 /**
 * Style de navigatie links met de :has pseudo-selector.
 */
