@@ -1,11 +1,20 @@
 /**
 * Nesting is handig, kan ook met combinatieselectoren zoals +, >, ~
 */
-
+.card{
+    a:hover {
+        color: blue;
+        background-color: aqua;
+    }
+}
 /**
 * Wat met de ampersand (&) selector?
 */
-
+article {
+  & + p {
+    color: rgb(241, 217, 0);
+  }
+}
 /**
 * Niet over-nesten! Maximaal 3 niveaus diep.
 */
@@ -17,3 +26,28 @@
 /*
 * Nesting met media queries!
 */
+
+@media (min-width: 40rem) {
+    .lead {
+        font-size: x-large;
+    }
+}
+
+@media (min-width: 60rem) {
+    .lead {
+        font-size: xx-large;
+    }
+}
+
+.lead{
+    font-size: medium;
+
+    @media (min-width: 40rem) {
+        font-size: x-large;
+    }
+
+    @media (min-width: 60rem) {
+        font-size: xx-large;
+    }
+}
+
