@@ -1,3 +1,29 @@
-.hero {
+.card-wrapper{
+    width: min(500px);
+}
 
+.text{
+    padding: max(4rem);
+}
+
+.custom-grid{
+    display: grid;
+    grid-template-rows: minmax(200px, 3fr);
+}
+
+.lead{
+    font-size: clamp(1rem, 2.5vw, 2rem);
+}
+
+.hero{
+    height: 100vh;
+}
+
+.hero--updated{
+    height: 100svh;
+}
+
+.article{
+    margin-inline: 4rem;
+    margin-block: 3rem;
 }
