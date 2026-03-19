@@ -1,1 +1,59 @@
 /**/
+:root {
+    --primary: hsl(50, 100%, 42%);
+    --secondary: hsl(206, 100%, 40%);
+    --print: hsl(0, 0%, 100%);
+}
+
+body {
+    background-color: var(--primary);
+
+    @media screen and (min-width: 700px) {
+        background-color: var(--secondary);
+        --pico-font-size: 3rem;
+    }
+
+    @media print {
+        background-color: var(--print);
+        color: black;
+    }
+}
+
+@media (800px < width < 1200px) {
+    :root {
+        --pico-color: green; 
+
+    }
+    
+}
+
+@media print {
+    .print-hide {
+        display: none;
+    }
+}
+
+
+.touch-only{
+    display: none;
+
+    @media screen and (hover: none) {
+        display: block;
+    }
+}
+
+.no-touch-only {
+    display: none;
+
+    @media screen and (hover: hover){
+        display: block;
+    }
+}
+
+.vertical-only {
+    display: none;
+
+    @media screen and (orientation: portrait) {
+        display: block;
+    }
+}

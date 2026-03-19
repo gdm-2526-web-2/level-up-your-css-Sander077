@@ -1,0 +1,22 @@
+
+body.dark-mode {
+    .card {
+        background-color: rgb(255, 145, 145);
+        border: 1px solid black;
+    }
+}
+
+.card {
+    @media screen and (prefers-color-scheme: light) {
+        background-color: rgb(255, 145, 145);
+        border: 1px solid black;
+
+    }
+}
+
+.moving-ball {
+    @media screen and (prefers-reduced-motion: reduce) {
+        animation: none;
+
+    }
+}
