@@ -1,1 +1,38 @@
 /* Maak hier animaties voor pagina-transities */
+
+/* View Transitions API: standaard fade tussen pagina's, via pseudo-elementen */
+:root {
+  view-transition-name: page;
+}
+
+html, body, .main-content {
+  view-transition: cross-fade 300ms ease-in-out;
+}
+
+::view-transition-old(root) {
+  animation: vt-fade-out 300ms ease-in-out both;
+}
+
+::view-transition-new(root) {
+  animation: vt-fade-in 300ms ease-in-out both;
+}
+
+::view-transition-old(*) {
+  opacity: 0.55;
+  transform: translateY(-0.7rem) scale(0.98);
+}
+
+::view-transition-new(*) {
+  opacity: 0.7;
+  transform: translateY(0.7rem) scale(1.02);
+}
+
+@keyframes vt-fade-out {
+  from { opacity: 1; transform: translateY(0) scale(1); }
+  to { opacity: 0.25; transform: translateY(-1rem) scale(0.95); }
+}
+
+@keyframes vt-fade-in {
+  from { opacity: 0; transform: translateY(0.8rem) scale(1.02); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
