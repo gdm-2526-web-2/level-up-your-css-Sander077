@@ -3,4 +3,10 @@
 
 h1 {
   /* Using the MORF axis to vary the shape of the letters, play with hover effects! */
+  font-variation-settings: "MORF" 0;
+  transition: all 0.5s ease;
+
+  &:hover {
+    font-variation-settings: "MORF" 60;
+  }
 }
